@@ -1,0 +1,17 @@
+{
+  "name": "treydock-kernel",
+  "version": "0.0.1",
+  "author": "treydock",
+  "summary": "kernel Puppet module",
+  "license": "Apache 2.0",
+  "source": "git://github.com/treydock/puppet-module-kernel.git",
+  "issues_url": "https://github.com/treydock/puppet-module-kernel/issues",
+  "project_page": "https://github.com/treydock/puppet-module-kernel",
+  "dependencies": [
+    {
+      "version_range": ">= 3.2.0 <5.0.0",
+      "name": "puppetlabs-stdlib"
+    }
+  ]
+}
+
