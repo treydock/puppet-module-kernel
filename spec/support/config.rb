@@ -10,10 +10,11 @@ shared_examples_for "kernel::config" do
         :osfamily                   => 'RedHat',
         :operatingsystem            => 'CentOS',
         :operatingsystemmajrelease  => '6',
+        :architecture               => 'x86_64',
       }
     end
 
-    let(:params) {{ :version => '2.6.32.el6.x86_64' }}
+    let(:params) {{ :version => '2.6.32.el6' }}
     it { should_not contain_notify('kernel') }
   end
 
@@ -24,10 +25,11 @@ shared_examples_for "kernel::config" do
         :osfamily                   => 'RedHat',
         :operatingsystem            => 'CentOS',
         :operatingsystemmajrelease  => '6',
+        :architecture               => 'x86_64',
       }
     end
 
-    let(:params) {{ :version => '2.6.32-431.29.2.el6.x86_64' }}
+    let(:params) {{ :version => '2.6.32-431.29.2.el6' }}
 
     it do
       should contain_notify('kernel').with({

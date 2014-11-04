@@ -4,12 +4,12 @@ class kernel::config {
     fail("Use of private class ${name} by ${caller_module_name}")
   }
 
-  if $kernel::version != 'UNSET' {
-    $current = $::kernelrelease
+  if $kernel::kernel_version != 'UNSET' {
+    $current  = $::kernelrelease
 
-    if $current != $kernel::version {
+    if $current != $kernel::kernel_version {
       notify { 'kernel':
-        message => "A reboot is required to change the running kernel from ${current} to ${kernel::version}"
+        message => "A reboot is required to change the running kernel from ${current} to ${kernel::kernel_version}"
       }
     }
   }

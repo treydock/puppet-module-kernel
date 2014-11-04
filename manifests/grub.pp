@@ -5,7 +5,7 @@ class kernel::grub {
   }
 
   $grub_default_kernel = $kernel::grub_default_kernel ? {
-    'UNSET' => $kernel::version,
+    'UNSET' => $kernel::kernel_version,
     default => $kernel::grub_default_kernel,
   }
 

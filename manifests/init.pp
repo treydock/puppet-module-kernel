@@ -24,6 +24,12 @@ class kernel (
   validate_string($package_name, $devel_package_name, $headers_package_name)
   validate_string($grub_conf_path, $grub_class)
 
+  if $version != 'UNSET' {
+    $kernel_version = "${kernel::version}.${::architecture}"
+  } else {
+    $kernel_version = 'UNSET'
+  }
+
   include kernel::install
   include kernel::config
   include "kernel::${grub_class}"

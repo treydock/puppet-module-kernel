@@ -27,7 +27,7 @@ The default behavior of this module is to ensure the kernel package is present.
 This is an example of ensuring a specific version of the kernel is installed and set as the default in GRUB.
 
     class { 'kernel'
-      version => '2.6.32-431.23.3.el6.x86_64'
+      version => '2.6.32-431.23.3.el6'
     }
 
 ## Reference

@@ -7,6 +7,7 @@ describe 'kernel' do
       :osfamily                   => 'RedHat',
       :operatingsystem            => 'CentOS',
       :operatingsystemmajrelease  => '6',
+      :architecture               => 'x86_64',
     }
   end
 
@@ -30,6 +31,7 @@ describe 'kernel' do
         :osfamily                   => 'RedHat',
         :operatingsystem            => 'CentOS',
         :operatingsystemmajrelease  => '7',
+        :architecture               => 'x86_64',
       }
     end
 
