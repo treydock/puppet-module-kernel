@@ -3,9 +3,10 @@ class kernel::params {
 
   case $::osfamily {
     'RedHat': {
-      $package_name         = 'kernel'
-      $devel_package_name   = 'kernel-devel'
-      $headers_package_name = 'kernel-headers'
+      $package_name          = 'kernel'
+      $devel_package_name    = 'kernel-devel'
+      $headers_package_name  = 'kernel-headers'
+      $firmware_package_name = 'kernel-firmware'
 
       if $::operatingsystemmajrelease <= 6 {
         $grub_class     = 'grub'

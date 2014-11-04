@@ -78,6 +78,14 @@ Boolean to specify whether the kernel-headers package should be installed.  Defa
 
 The kernel headers package name.  Default is OS dependent.
 
+#####`install_firmware`
+
+Boolean to specify whether the kernel-firmware package should be installed.  Default to `false`.
+
+#####`firmware_package_name`
+
+The kernel firmware package name.  Default is OS dependent.
+
 #####`set_default_kernel`
 
 Boolean to specify whether if the default kernel in GRUB should be modified by this module.  Default to `true`.

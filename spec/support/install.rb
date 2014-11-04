@@ -10,11 +10,12 @@ shared_examples_for "kernel::install" do
 
   it { should_not contain_package('kernel-dev') }
   it { should_not contain_package('kernel-headers') }
+  it { should_not contain_package('kernel-firmware') }
 
   context 'when version defined' do
-    let(:params) {{ :version => '2.6.32-431.23.3.el6.x86_64' }}
+    let(:params) {{ :version => '2.6.32-431.23.3.el6' }}
 
-    it { should contain_package('kernel').with_name('kernel-2.6.32-431.23.3.el6.x86_64') }
+    it { should contain_package('kernel').with_name('kernel-2.6.32-431.23.3.el6') }
   end
 
   context 'when install_devel => true' do
@@ -23,8 +24,8 @@ shared_examples_for "kernel::install" do
     it { should contain_package('kernel-devel').with_ensure('present') }
 
     context 'when version defined' do
-      let(:params) {{ :install_devel => true, :version => '2.6.32-431.23.3.el6.x86_64' }}
-      it { should contain_package('kernel-devel').with_name('kernel-devel-2.6.32-431.23.3.el6.x86_64') }
+      let(:params) {{ :install_devel => true, :version => '2.6.32-431.23.3.el6' }}
+      it { should contain_package('kernel-devel').with_name('kernel-devel-2.6.32-431.23.3.el6') }
     end
   end
 
@@ -34,8 +35,19 @@ shared_examples_for "kernel::install" do
     it { should contain_package('kernel-headers').with_ensure('present') }
 
     context 'when version defined' do
-      let(:params) {{ :install_headers => true, :version => '2.6.32-431.23.3.el6.x86_64' }}
-      it { should contain_package('kernel-headers').with_name('kernel-headers-2.6.32-431.23.3.el6.x86_64') }
+      let(:params) {{ :install_headers => true, :version => '2.6.32-431.23.3.el6' }}
+      it { should contain_package('kernel-headers').with_ensure('2.6.32-431.23.3.el6') }
+    end
+  end
+
+  context 'when install_firmware => true' do
+    let(:params) {{ :install_firmware => true }}
+
+    it { should contain_package('kernel-firmware').with_ensure('present') }
+
+    context 'when version defined' do
+      let(:params) {{ :install_firmware => true, :version => '2.6.32-431.23.3.el6' }}
+      it { should contain_package('kernel-firmware').with_ensure('2.6.32-431.23.3.el6') }
     end
   end
 
