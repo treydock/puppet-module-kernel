@@ -7,10 +7,25 @@
   "source": "git://github.com/treydock/puppet-module-kernel.git",
   "issues_url": "https://github.com/treydock/puppet-module-kernel/issues",
   "project_page": "https://github.com/treydock/puppet-module-kernel",
+  "tags": [ "kernel", "grub", "centos", "redhat" ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [ "5", "6", "7" ]
+    },
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [ "5", "6", "7" ]
+    },
+    {
+      "operatingsystem": "Scientific",
+      "operatingsystemrelease": [ "5", "6", "7" ]
+    }
+  ],
   "dependencies": [
     {
-      "version_range": ">= 3.2.0 <5.0.0",
-      "name": "puppetlabs-stdlib"
+      "name": "puppetlabs-stdlib",
+      "version_range": ">= 3.2.0 <5.0.0"
     }
   ]
 }
