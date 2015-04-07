@@ -8,7 +8,7 @@ class kernel::params {
       $headers_package_name  = 'kernel-headers'
       $firmware_package_name = 'kernel-firmware'
 
-      if $::operatingsystemmajrelease <= 6 {
+      if versioncmp($::operatingsystemmajrelease, '6') < 1 {
         $grub_class     = 'grub'
         $grub_conf_path = '/boot/grub/grub.conf'
       } else {
