@@ -2,6 +2,7 @@ source ENV['GEM_SOURCE'] || "https://rubygems.org"
 
 group :development, :test do
   gem 'rake',                     :require => false
+  gem 'rspec', '~>3.1.0',         :require => false
   gem 'rspec-puppet', '~>2.x',    :require => false
   gem 'rspec-puppet-facts',       :require => false
   gem 'puppetlabs_spec_helper',   :require => false
@@ -14,7 +15,6 @@ group :system_tests do
   gem 'beaker', '~>2.2.0',        :require => false
   gem 'beaker-rspec',             :require => false
   gem 'serverspec',               :require => false
-  gem 'pry',                      :require => false unless RUBY_VERSION =~ /^1.8/
 end
 
 if facterversion = ENV['FACTER_GEM_VERSION']
