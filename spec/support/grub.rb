@@ -1,4 +1,4 @@
-shared_examples_for "kernel::grub" do
+shared_examples_for "kernel::grub" do |default_facts|
   it { should have_augeas_resource_count(0) }
 
   it { should_not contain_augeas('set default kernel') }

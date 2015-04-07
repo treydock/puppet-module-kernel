@@ -1,4 +1,4 @@
-shared_examples_for "kernel::install" do
+shared_examples_for "kernel::install" do |default_facts|
   it { should have_package_resource_count(1) }
 
   it do
