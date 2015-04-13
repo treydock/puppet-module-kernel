@@ -9,6 +9,6 @@ describe 'kernel_arguments fact' do
   it "should return output from /proc/cmdline" do
     expected_value = my_fixture_read('cmdline1')
     Facter::Util::Resolution.expects(:exec).with('cat /proc/cmdline 2>/dev/null').returns(expected_value)
-    Facter.fact(:kernel_arguments).value.should == expected_value
+    expect(Facter.fact(:kernel_arguments).value).to eq(expected_value)
   end
 end
