@@ -44,6 +44,7 @@ This is an example of ensuring a specific version of the kernel is installed and
 * `kernel::config`: Checks if running kernel matches version set in parameters.
 * `kernel::grub`: Manages GRUB default kernel.
 * `kernel::grub2`: Manages GRUB2 default kernel.
+* `kernel::grubby`: Manages GRUB and GRUB2 default kernel using grubby command.
 * `kernel::params`: Sets parameter defaults based on fact values.
 
 ### Parameters
@@ -100,7 +101,7 @@ The path to GRUB configuration file.  Default is OS dependent.
 
 #####`grub_class`
 
-The class to be used to manage GRUB.  This parameter is not intended to be set and is considered private.
+The class to be used to manage GRUB.  Default for EL6 is `grub` and default for EL7 is `grub2` (not yet implemented).  The `grubby` class is also available.
 
 ## Limitations
 
