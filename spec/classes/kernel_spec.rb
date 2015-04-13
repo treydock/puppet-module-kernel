@@ -35,6 +35,7 @@ describe 'kernel' do
       it_behaves_like 'kernel::install', default_facts
       it_behaves_like 'kernel::config', default_facts
       it_behaves_like "kernel::#{grubclass}", default_facts
+      it_behaves_like "kernel::grubby", default_facts
 
       # Test validate_bool parameters
       [
