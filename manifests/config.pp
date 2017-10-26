@@ -4,7 +4,7 @@ class kernel::config {
     fail("Use of private class ${name} by ${caller_module_name}")
   }
 
-  if $kernel::kernel_version != 'UNSET' {
+  if $kernel::kernel_version {
     $current  = $::kernelrelease
 
     if $current != $kernel::kernel_version {

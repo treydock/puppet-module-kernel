@@ -4,7 +4,7 @@ class kernel::install {
     fail("Use of private class ${name} by ${caller_module_name}")
   }
 
-  if $kernel::version != 'UNSET' {
+  if $kernel::version {
     $package_name            = "${kernel::package_name}-${kernel::version}"
     $devel_package_name      = "${kernel::devel_package_name}-${kernel::version}"
     $headers_package_ensure  = $kernel::version

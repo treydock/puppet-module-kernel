@@ -5,11 +5,11 @@ class kernel::grubby{
   }
 
   $grub_default_kernel = $kernel::grub_default_kernel ? {
-    'UNSET' => $kernel::kernel_version,
+    Undef   => $kernel::kernel_version,
     default => $kernel::grub_default_kernel,
   }
 
-  if $kernel::set_default_kernel and $grub_default_kernel != 'UNSET' {
+  if $kernel::set_default_kernel and $grub_default_kernel {
 
     $_default_kernel = "/boot/vmlinuz-${grub_default_kernel}"
 
