@@ -1,6 +1,6 @@
 {
   "name": "treydock-kernel",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "author": "treydock",
   "summary": "kernel Puppet module",
   "license": "Apache-2.0",

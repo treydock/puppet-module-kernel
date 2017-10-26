@@ -17,7 +17,7 @@ describe 'kernel class:' do
     when '7'
       version = '3.10.0-229.1.2.el7'
     when '6'
-      version = '2.6.32-504.12.2.el6'
+      version = '2.6.32-573.3.1.el6'
     end
 
     it 'should run successfully' do
