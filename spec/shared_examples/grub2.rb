@@ -1,3 +1,2 @@
-shared_examples_for "kernel::grub2" do |default_facts|
-
+shared_examples_for 'kernel::grub2' do |default_facts|
 end
